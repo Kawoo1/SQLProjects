@@ -3,6 +3,14 @@ import sqlite3
 
 # Authored by: Kyle Shanahan
 # This program takes a compilation of files and turns them into a SQLite database.
+# [1] Things you will need:  -- SQLite -- If you don't have SQLite installed, 
+# download it from the official website: https://www.sqlite.org/index.html
+# otherwise, you can use an SQL database browser like DB Browser for SQLite
+# [2] Execute this in BASH: 
+# sqlite3 your_database_name.db < output.sql
+# [3] Open the SQLite command-line tool or use a SQLite database browser,
+# then execute this command: SELECT * FROM files;
+
 
 def create_sql_file(file_entries, sql_file_path):
     with open(sql_file_path, 'w') as sql_file:
