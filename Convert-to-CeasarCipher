@@ -1,0 +1,22 @@
+# This program is a python file that translates a users prompted information (up to 1000 characters) into 
+# an encrypted message using the ceasar cipher.
+# Authored by: Kyle Shanahan
+
+def caesar_cipher(text, shift):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            start = ord('a') if char.islower() else ord('A')
+            result += chr((ord(char) - start + shift) % 26 + start)
+        else:
+            result += char
+    return result
+user_input = input("Enter a text (up to 1000 characters): ")
+
+# Limit input to 1000 characters
+user_input = user_input[:1000]
+shift_value = int(input("Enter the Caesar cipher shift value: "))
+
+# Apply Caesar cipher and print the result
+encrypted_text = caesar_cipher(user_input, shift_value)
+print("Encrypted text:", encrypted_text)
