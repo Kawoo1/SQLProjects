@@ -7,3 +7,4 @@ The projects in this repository include:
 3) Empty Database (Empty_Database.sql)
 4) Turn Me to SQL! (turnMeToSQL.py)
 5) Database Library Schema (ManageMeLibrary.sql)
+6) S&P500 Stock Table (SsP500_StockTable.sql)
