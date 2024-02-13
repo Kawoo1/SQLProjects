@@ -1,7 +1,12 @@
 -- This SQL file was authored by: Kyle Shanahan
 -- This program takes a small iteration of the S & P 500 stocks and compiles them into a table to be queried
 -- The comments indicating sample data being inserted are by Stock Ticker. 
-
+-- The list of stock companies used are:
+-- (JNJ) Johnson and Johnson, one of the biggest drug and pharmacuetical companies
+-- (V) Visa, a payment processing technology company
+-- (PG) Proctor and Gamble, a consumer health product company
+-- (UNH) United Health Group, a large healthcare company
+-- (HD) Home Depot, a consumer home improvement and construction material company
 
 -- Create table for S&P 500 stocks
 INSERT INTO sp500_stocks (symbol, company_name, sector, industry, exchange)
