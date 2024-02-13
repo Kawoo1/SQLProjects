@@ -1,29 +1,9 @@
 -- This SQL file was authored by: Kyle Shanahan
 -- This program takes a small iteration of the S & P 500 stocks and compiles them into a table to be queried
+-- The comments indicating sample data being inserted are by Stock Ticker. 
+
 
 -- Create table for S&P 500 stocks
-CREATE TABLE sp500_stocks (
-    id SERIAL PRIMARY KEY,
-    symbol VARCHAR(10) UNIQUE NOT NULL,
-    company_name VARCHAR(255) NOT NULL,
-    sector VARCHAR(100),
-    industry VARCHAR(100),
-    exchange VARCHAR(50)
-);
-
--- Create table for stock data
-CREATE TABLE stock_data (
-    id SERIAL PRIMARY KEY,
-    stock_id INT REFERENCES sp500_stocks(id),
-    date DATE NOT NULL,
-    open_price DECIMAL(12, 2),
-    high_price DECIMAL(12, 2),
-    low_price DECIMAL(12, 2),
-    close_price DECIMAL(12, 2),
-    volume INT
-);
-
--- Insert sample S&P 500 stock data
 INSERT INTO sp500_stocks (symbol, company_name, sector, industry, exchange)
 VALUES 
     ('AAPL', 'Apple Inc.', 'Technology', 'Consumer Electronics', 'NASDAQ'),
@@ -32,20 +12,50 @@ VALUES
     ('GOOGL', 'Alphabet Inc. Class A', 'Communication Services', 'Internet Content & Information', 'NASDAQ'),
     ('BRK.B', 'Berkshire Hathaway Inc. Class B', 'Financial Services', 'Insurance—Diversified', 'NYSE'),
     -- Add more stocks as needed
+    ('JNJ', 'Johnson & Johnson', 'Healthcare', 'Drug Manufacturers—General', 'NYSE'),
+    ('V', 'Visa Inc. Class A', 'Financial Services', 'Credit Services', 'NYSE'),
+    ('PG', 'Procter & Gamble Company', 'Consumer Defensive', 'Household & Personal Products', 'NYSE'),
+    ('UNH', 'UnitedHealth Group Incorporated', 'Healthcare', 'Healthcare Plans', 'NYSE'),
+    ('HD', 'The Home Depot Inc.', 'Consumer Cyclical', 'Home Improvement Retail', 'NYSE'),
+    -- Add more stocks as needed
     ;
 
--- Insert sample stock data for AAPL
+-- Insert sample stock data for JNJ
 INSERT INTO stock_data (stock_id, date, open_price, high_price, low_price, close_price, volume)
 VALUES
-    (1, '2024-02-10', 160.50, 165.75, 160.25, 164.80, 5000000),
-    (1, '2024-02-11', 164.00, 168.25, 163.50, 167.40, 5500000),
-    -- Add more data for AAPL or other stocks as needed
+    (6, '2024-02-10', 150.20, 152.50, 149.75, 151.90, 3000000),
+    (6, '2024-02-11', 152.00, 155.75, 151.00, 154.20, 3200000),
+    -- Add more data for JNJ or other stocks as needed
     ;
 
-
+-- Insert sample stock data for V
 INSERT INTO stock_data (stock_id, date, open_price, high_price, low_price, close_price, volume)
 VALUES
-    (2, '2024-02-10', 300.20, 305.50, 299.75, 304.90, 4000000),
-    (2, '2024-02-11', 305.00, 310.75, 304.00, 309.20, 4500000),
+    (7, '2024-02-10', 210.50, 215.75, 209.25, 214.80, 2000000),
+    (7, '2024-02-11', 215.00, 220.75, 214.00, 219.20, 2200000),
+    -- Add more data for V or other stocks as needed
     ;
 
+-- Insert sample stock data for PG
+INSERT INTO stock_data (stock_id, date, open_price, high_price, low_price, close_price, volume)
+VALUES
+    (8, '2024-02-10', 120.50, 125.75, 119.25, 124.80, 1800000),
+    (8, '2024-02-11', 125.00, 130.75, 124.00, 129.20, 1900000),
+    -- Add more data for PG or other stocks as needed
+    ;
+
+-- Insert sample stock data for UNH
+INSERT INTO stock_data (stock_id, date, open_price, high_price, low_price, close_price, volume)
+VALUES
+    (9, '2024-02-10', 340.50, 345.75, 339.25, 344.80, 1500000),
+    (9, '2024-02-11', 345.00, 350.75, 344.00, 349.20, 1600000),
+    -- Add more data for UNH or other stocks as needed
+    ;
+
+-- Insert sample stock data for HD
+INSERT INTO stock_data (stock_id, date, open_price, high_price, low_price, close_price, volume)
+VALUES
+    (10, '2024-02-10', 400.50, 405.75, 399.25, 404.80, 1300000),
+    (10, '2024-02-11', 405.00, 410.75, 404.00, 409.20, 1400000)
+    -- Add more data for HD or other stocks as needed
+    ;
