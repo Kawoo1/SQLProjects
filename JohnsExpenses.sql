@@ -1,4 +1,4 @@
--- This simple SQL file will create a table to track "John's" expenses and calculate annual income
+-- This SQL files creates a database table to be filled with a users information to track expenses
 -- Authored by: Kyle Shanahan
 -- Creates a table to track "John's" expenses
 CREATE TABLE JohnExpenses (
