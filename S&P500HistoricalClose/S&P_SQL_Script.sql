@@ -8,7 +8,7 @@ CREATE TABLE sp500_history (
 
 -- Insert Data
 BULK INSERT sp500_history
-FROM -- 'path_to_your_csv_file\sp500_data.csv' <--- This will be replaced with a path to a file in the "S&P500HistoricalClose" folder of the github repo after creation
+FROM  'SnP500-Daily-Close.csv' -- <--- This will be replaced with a path to a file in the "S&P500HistoricalClose" folder of the github repo after creation
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
