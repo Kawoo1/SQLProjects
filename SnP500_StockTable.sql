@@ -2,7 +2,7 @@
 -- This program takes a small iteration of the S & P 500 stocks and compiles them into a table to be queried
 -- The comments indicating sample data being inserted are by Stock Ticker. 
 -- The list of stock companies used are:
--- (JNJ) Johnson and Johnson, one of the biggest drug and pharmacuetical companies
+-- (JNJ) Johnson and Johnson, one of the biggest drug and pharmacuetical companies in the United States
 -- (V) Visa, a payment processing technology company
 -- (PG) Proctor and Gamble, a consumer health product company
 -- (UNH) United Health Group, a large healthcare company
