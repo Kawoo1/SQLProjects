@@ -8,6 +8,8 @@ CREATE TABLE sales (
     profit INT
 );
 
+-- This fills the table "sales" with product data including the following parameters:
+-- year, country, product, and profit
 INSERT INTO sales (year, country, product, profit) VALUES
 (2000, 'Finland', 'Computer', 1500),
 (2000, 'Finland', 'Phone', 100),
